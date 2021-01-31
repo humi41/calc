@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Vorlage_button1" >
+        style="@style/Widget.AppCompat.Button.Borderless"
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/buttondesign_light1</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="Vorlage_button2" >
+        style="@style/Widget.AppCompat.Button.Borderless"
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/buttondesign_light2</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="Vorlage_button4" >
+        style="@style/Widget.AppCompat.Button.Borderless"
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/buttondesign_dark1</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="Vorlage_button5" >
+        style="@style/Widget.AppCompat.Button.Borderless"
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/buttondesign_dark2</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="Vorlage_imageButton1">
+        style="@style/Widget.AppCompat.Button.Borderless"
+        <item name="android:layout_width">95dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/buttondesign_light1</item>
+    </style>
+
+    <style name="Vorlage_imageButton2">
+        style="@style/Widget.AppCompat.Button.Borderless"
+        <item name="android:layout_width">95dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/buttondesign_dark1</item>
+    </style>
+
+
+</resources>

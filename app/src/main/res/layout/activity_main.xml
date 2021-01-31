@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/schalter"
+        android:textOff="OFF"
+        android:textOn="ON"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEingabe"
+        app:layout_constraintVertical_bias="0.96"
+        tools:layout_editor_absoluteX="0dp">
+
+        <RadioGroup
+            android:layout_marginBottom="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/buttonBin"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/buttondesign_light2"                android:layout_marginRight="1dp"
+                android:layout_height="40dp"
+                android:layout_width="20dp"
+                android:layout_weight="1"
+                android:text="@string/bin"
+                android:layout_marginLeft="1dp"
+                android:onClick="konvertieren" />
+
+            <RadioButton
+                android:id="@+id/buttonOkt"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/buttondesign_light2"                android:layout_marginRight="1dp"
+                android:layout_height="40dp"
+                android:layout_width="20dp"
+                android:layout_weight="1"
+                android:text="@string/okt"
+                android:layout_marginLeft="1dp"
+                android:onClick="konvertieren" />
+
+            <RadioButton
+                android:id="@+id/buttonDez"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/buttondesign_light2"
+                android:layout_marginRight="1dp"
+                android:layout_height="40dp"
+                android:layout_width="20dp"
+                android:layout_weight="1"
+                android:text="@string/dez"
+                android:layout_marginLeft="1dp"
+                android:onClick="konvertieren" />
+
+            <RadioButton
+                android:id="@+id/buttonHex"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/buttondesign_light2"                android:layout_marginRight="1dp"
+                android:layout_height="40dp"
+                android:layout_width="20dp"
+                android:layout_weight="1"
+                android:text="@string/hex"
+                android:layout_marginLeft="1dp"
+                android:onClick="konvertieren" />
+
+        </RadioGroup>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonA"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonA"
+                android:text="@string/a"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonB"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonB"
+                android:text="@string/b"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonC"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonC"
+                android:text="@string/c"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonD"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonD"
+                android:text="@string/d"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonE"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonE"
+                android:text="@string/e"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonF"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonF"
+                android:text="@string/f"
+                app:backgroundTint="@null" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonPluMin"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonPlusMinus"
+                android:text="@string/plusMinus"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonExp"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonExponent"
+                android:text="@string/exponent"
+                app:backgroundTint="@null" />
+
+<!--            <Button-->
+<!--                android:id="@+id/buttonWurzel"-->
+<!--                style="@style/Vorlage_button1"-->
+<!--                android:onClick="buttonWurzel"-->
+<!--                android:text="@string/wurzel"-->
+<!--                app:backgroundTint="@null" />-->
+
+            <Button
+                android:id="@+id/buttonKlammer"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonKlammer"
+                android:text="@string/klammer"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonDiv"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonDivision"
+                android:text="@string/division"
+                app:backgroundTint="@null" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonSieben"
+                style="@style/Vorlage_button2"
+                android:onClick="buttonSieben"
+                android:text="@string/sieben"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonAcht"
+                style="@style/Vorlage_button2"
+                android:onClick="buttonAcht"
+                android:text="@string/acht"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonNeun"
+                style="@style/Vorlage_button2"
+                android:onClick="buttonNeun"
+                android:text="@string/neun"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonMult"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonMultiplikation"
+                android:text="@string/multiplikation"
+                app:backgroundTint="@null" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonVier"
+                style="@style/Vorlage_button2"
+                android:onClick="buttonVier"
+                android:text="@string/vier"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonFuenf"
+                style="@style/Vorlage_button2"
+                android:onClick="buttonFuenf"
+                android:text="@string/fuenf"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonSechs"
+                style="@style/Vorlage_button2"
+                android:onClick="buttonSechs"
+                android:text="@string/sechs"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonSub"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonSubtraktion"
+                android:text="@string/subtraktion"
+                app:backgroundTint="@null" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonEins"
+                style="@style/Vorlage_button2"
+                android:onClick="buttonEins"
+                android:text="@string/eins"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonZwei"
+                style="@style/Vorlage_button2"
+                android:onClick="buttonZwei"
+                android:text="@string/zwei"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonDrei"
+                style="@style/Vorlage_button2"
+                android:onClick="buttonDrei"
+                android:text="@string/drei"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonAdd"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonAddition"
+                android:text="@string/addition"
+                app:backgroundTint="@null" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonLoeschen"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonLoeschen"
+                android:text="@string/loeschen"
+                android:textColor="#F60319"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonZero"
+                style="@style/Vorlage_button2"
+                android:onClick="buttonZero"
+                android:text="@string/zero"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonKomma"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonKomma"
+                android:text="@string/komma"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/buttonGleich"
+                style="@style/Vorlage_button1"
+                android:onClick="buttonGleich"
+                android:text="@string/gleich"
+                android:textColor="#08BC0F"
+                app:backgroundTint="@null" />
+
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/textEingabe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/anzeige"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="false"
+        android:inputType="none"
+        android:textSize="36sp"
+        android:textAlignment="textEnd"
+        tools:ignore="LabelFor" />
+
+    <ImageButton
+        android:id="@+id/button29"
+        style="@style/Vorlage_imageButton1"
+        android:contentDescription="@string/zurueck"
+        android:onClick="buttonZurueck"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/zurueck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #8c8c8c; font-style: italic;}
+.s3 { color: #067d17;}
+.s4 { color: #1750eb;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.taschenrechner_hwr;</span>
+
+<span class="s0">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity;</span>
+
+<span class="s0">import </span><span class="s1">android.os.Bundle;</span>
+<span class="s0">import </span><span class="s1">android.view.View;</span>
+<span class="s0">import </span><span class="s1">android.widget.EditText;</span>
+
+<span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity {</span>
+
+    <span class="s0">private </span><span class="s1">EditText anzeige;</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState);</span>
+        <span class="s1">setContentView(R.layout.activity_main);</span>
+        
+        <span class="s1">anzeige = findViewById(R.id.textEingabe);</span>
+
+        <span class="s2">//Tastatur Popup bleibt deaktiviert</span>
+        <span class="s1">anzeige.setShowSoftInputOnFocus(</span><span class="s0">false</span><span class="s1">);</span>
+
+        <span class="s2">//Der Text in dem Anzeigefenster verschwindet nach einer Eingabe automatisch</span>
+        <span class="s1">anzeige.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s0">public void </span><span class="s1">onClick(View v) {</span>
+                <span class="s0">if </span><span class="s1">(getString(R.string.anzeige).equals(anzeige.getText().toString())){</span>
+                    <span class="s1">anzeige.setText(</span><span class="s3">&quot; &quot;</span><span class="s1">);</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">});</span>
+    <span class="s1">}</span>
+
+    <span class="s0">private void </span><span class="s1">updateText(String strToAdd) {</span>
+        <span class="s1">String oldStr = anzeige.getText().toString();</span>
+        <span class="s0">int </span><span class="s1">cursorPos = anzeige.getSelectionStart();</span>
+        <span class="s1">String leftStr = oldStr.substring(</span><span class="s4">0</span><span class="s1">, cursorPos);</span>
+        <span class="s1">String rightStr = oldStr.substring(cursorPos);</span>
+        <span class="s1">anzeige.setText(String.format(</span><span class="s3">&quot;%s%s%s&quot;</span><span class="s1">, leftStr, strToAdd, rightStr));</span>
+    <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonZero (View view){</span>
+        <span class="s1">updateText(</span><span class="s3">&quot;0&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonEins (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;1&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonZwei (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;2&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonDrei (View view){</span>
+            <span class="s1">updateText( </span><span class="s3">&quot;3&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonVier (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;4&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonFuenf (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;5&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonSechs (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;6&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonSieben (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;7&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+        <span class="s0">public void </span><span class="s1">buttonAcht (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;8&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonNeun (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;9&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonExponent (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;²&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonWurzel (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;√&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonSinus (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;SIN&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonCosinus (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;COS&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonTangens (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;TAN&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonAddition (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;+&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonSubtraktion (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;-&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonDivision (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;÷&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonMultiplikation (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;×&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonKomma (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot;,&quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonLoeschen (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot; &quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonKlammer (View view){</span>
+            <span class="s1">updateText(</span><span class="s3">&quot; &quot;</span><span class="s1">);</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonPlusMinus (View view){</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonGleich (View view){</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonZurueck (View view){</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonBinaer (View view){</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonDezimal (View view){</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonHexadezimal (View view){</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">buttonOktal (View view){</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">textAnzeige (View view){</span>
+        <span class="s1">}</span>
+
+        <span class="s0">public void </span><span class="s1">switchSchalter (View view){</span>
+        <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>

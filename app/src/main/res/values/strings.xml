@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Taschenrechner_HWR</string>
+
+    <string name="eins">1</string>
+    <string name="zwei">2</string>
+    <string name="drei">3</string>
+    <string name="vier">4</string>
+    <string name="fuenf">5</string>
+    <string name="sechs">6</string>
+    <string name="sieben">7</string>
+    <string name="acht">8</string>
+    <string name="neun">9</string>
+    <string name="zero">0</string>
+
+    <string name="loeschen">C</string>
+    <string name="klammer">( )</string>
+    <string name="exponent">^</string>
+    <string name="wurzel">√</string>
+    <string name="addition">+</string>
+    <string name="subtraktion">-</string>
+    <string name="division">÷</string>
+    <string name="multiplikation">×</string>
+    <string name="plusMinus">±</string>
+    <string name="komma">,</string>
+    <string name="gleich">=</string>
+    <string name="zurueck"> </string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="e">E</string>
+    <string name="f">F</string>
+
+    <string name="bin">bin</string>
+    <string name="dez">dez</string>
+    <string name="hex">hex</string>
+    <string name="okt">okt</string>
+
+
+    <string name="anzeige">0</string>
+
+    <string name="schalter">Nachtmodus</string>
+
+
+
+
+</resources>
